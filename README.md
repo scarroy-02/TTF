@@ -9,4 +9,4 @@ So, made 2 classes with slight changes.
 * PersistenceWeightedGaussianKernel : 0.91
 * SlicedWassersteinKernel : 0.68
 
-Try scaling the kernel matrix.
+With big change, even persistence fisher gives 1.0 accuracy.
