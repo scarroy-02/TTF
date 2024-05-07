@@ -2,6 +2,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
+from random import sample
 
 def draw_with_labels(G,label):
     pos=nx.spring_layout(G)
@@ -33,3 +34,38 @@ def adj_fillinf(Gw):
     np.fill_diagonal(Ad,0)
     return Ad
 
+# Function to change graph for different classes. 5% edges are perturbed in the big change
+
+def big_change(G,m):
+    num_ch_edges = m//20
+    Ge = G.copy()
+    random_edge = sample(list(G.edges()),num_ch_edges)
+    # print(random_edge[0])
+    random_ptb = sample(list(range(1,5)),1)
+    # print(random_ptb[0])
+    random_sign = sample([0,1],1)
+    # print(random_sign[0])
+    for edge in random_edge:
+        if random_sign[0] == 0:
+            Ge.edges[edge[0],edge[1]]['time'] = Ge.edges[edge[0],edge[1]]['time'] - random_ptb[0]
+        elif random_sign[0] == 1:
+            Ge.edges[edge[0],edge[1]]['time'] = Ge.edges[edge[0],edge[1]]['time'] + random_ptb[0]
+    return Ge
+
+# Function to change the graph for the same class. 1% pertrubation
+
+def slight_change(G,m):
+    num_ch_edges = m//100
+    Ge = G.copy()
+    random_edge = sample(list(G.edges()),num_ch_edges)
+    # print(random_edge[0])
+    random_ptb = sample(list(range(1,5)),1)
+    # print(random_ptb[0])
+    random_sign = sample([0,1],1)
+    # print(random_sign[0])
+    for edge in random_edge:
+        if random_sign[0] == 0:
+            Ge.edges[edge[0],edge[1]]['time'] = Ge.edges[edge[0],edge[1]]['time'] - random_ptb[0]
+        elif random_sign[0] == 1:
+            Ge.edges[edge[0],edge[1]]['time'] = Ge.edges[edge[0],edge[1]]['time'] + random_ptb[0]
+    return Ge
