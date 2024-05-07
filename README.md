@@ -12,5 +12,3 @@ So, made 2 classes with slight changes.
 With big change, even persistence fisher gives 1.0 accuracy.
 
 Now tried standardising the kernel matrix. This gives very poor accuracy with SVM as well as Logistic Regression models with precomputed kernels. The accuracy is 0.1 for both cases. Will have to fix this, or maybe use the non-standardised kernel matrices.
-=======
->>>>>>> 81d3a35e4f711616891d3cebf44f7f9aab8bb8b2
