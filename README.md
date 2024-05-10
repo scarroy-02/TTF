@@ -47,3 +47,7 @@ Next we increase number of vertices to 100 keeping the number of edges to be 100
 2. With 3% and 1% perturbation, both 0.99 in both kernels.
 3. With 3% and 2% perturbation, SVM = 0.98, Logistic = 0.97 in PSSK, SVM = 0.98, Logistic = 0.95 in PWGK.
 4. With 2% and 1% perturbation, SVM = 1.0, Logistic = 0.98 in both kernels.
+
+Taking 100 vertices and 3000 edges.
+
+1. With 6% and 2% perturbation, SVM = 0.87, Logistic = 0.85 with PSSK.
