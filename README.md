@@ -40,3 +40,10 @@ Now trying with $|(V,E)|=(50,1000)$. Same as before, 5 classes, 100 in each clas
 2. With 3% and 1% perturbations, SVM = 0.53, Logistic = 0.53 both kernels. (Drastic change here)
 3. With 3% and 2% perturbations, SVM = 0.6, Logistic = 0.54 PSSK, SVM = 0.61, Logistic = 0.52 in PWGK.
 4. With 2% and 1% perturbations, SVM = 0.42, Logistic - 0.42 PSSK, SVM = 0.55, Logistic = 0.45 in PWGK.
+
+Next we increase number of vertices to 100 keeping the number of edges to be 1000. A problem is that it is taking too long, almost 2 hours for one round of testing.
+
+1. With 4% and 1% perturbation, both 1.0 in PSSK, SVM = 1.0 and Logistic = 0.99 in PWGK.
+2. With 3% and 1% perturbation, both 0.99 in both kernels.
+3. With 3% and 2% perturbation, SVM = 0.98, Logistic = 0.97 in PSSK, SVM = 0.98, Logistic = 0.95 in PWGK.
+4. With 2% and 1% perturbation, SVM = 1.0, Logistic = 0.98 in both kernels.
