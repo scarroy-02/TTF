@@ -54,6 +54,8 @@ Taking 100 vertices and 3000 edges.
 
 ## New set of experiments -
 
+Disclaimer : These experiments were done without taking into account the dimension of the points in the persistence diagram. Will implement that aspect after this set of experiments are documented.
+
 We have now 3 types of experiments to do. 
 
 ### Type 1 : (Testing by Madhav)
