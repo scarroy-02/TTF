@@ -71,16 +71,28 @@ Generate random graph $G$. Create `n` classes of graphs $G_1,\dots,G_n$ by rando
 | 3       | 3               | 1                | 0.99     |
 | 3       | 4               | 1.5              | 0.99     |
 | 3       | 5               | 2                | 0.99     |
+| 3       | 7               | 2                | 0.99     |
 | 5       | 3               | 1                | 0.99     |
 | 5       | 4               | 1.5              | 0.98     |
 | 5       | 5               | 2                | 0.98     |
+| 5       | 7               | 2                | 0.99     |
 | 7       | 3               | 1                | 0.98     |
 | 7       | 4               | 1.5              | 0.98     |
 | 7       | 5               | 2                | 0.97     |
+| 7       | 7               | 2                | 0.99     |
 | 9       | 3               | 1                | 0.99     |
 | 9       | 4               | 1.5              | 0.98     |
+| 9       | 5               | 2                | 0.97     |
+| 9       | 7               | 2                | 0.99     |
 
-2. V = 100, E = 1000, Sparsity = 0.2, big_change = 4%, small_change = 1.5%, PSSK, SVM (running)
+2. V = 100, E = 2000, Sparsity = 0.4, PSSK, SVM (running). This is averaged over 5 runs.
+
+| Classes | Class Perturb % | Within Perturb % | Accuracy |
+|---------|-----------------|------------------|----------|
+| 3       | 3               | 1                | 0.98     |
+| 5       | 3               | 1                | 0.95     |
+| 7       | 3               | 1                | 0.93     |
+| 9       | 3               | 1                | 0.88     |
 
 ### Type 2 : (Testing by Rohit)
 
