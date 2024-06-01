@@ -238,3 +238,13 @@ Generate `n` different random graphs $G_1,\dots,G_n$. Randomly perturb time labe
 ### Type 3 : (Testing not started yet)
 
 Sort of a combination of both type 1 and type 2. Generate random graphs, then for each graph generate the data as type 1. Then form the kernels and perform SVM.
+
+## Dimension wise experiments
+
+* Trying dimension-wise kernelization process.
+* Changed the function for incorporating the dimension wise persistence features.
+* Scrapped the use of giotto-tda.
+* Noticable results :
+    - Tried with sparsity 0.8 graphs (50,1000), with 5% perturbation.
+    - Using only dimension 2 features gave the best accuracy (95%).
+    - Older accuracy using giotto was around 67% the same setup.
