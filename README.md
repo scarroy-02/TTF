@@ -248,3 +248,14 @@ Sort of a combination of both type 1 and type 2. Generate random graphs, then fo
     - Tried with sparsity 0.8 graphs (50,1000), with 5% perturbation.
     - Using only dimension 2 features gave the best accuracy (95%).
     - Older accuracy using giotto was around 67% the same setup.
+
+## Incorporating C++
+
+The experiments from now on will use C++ for kernelization process. Steps to compile using C++ are as follows.
+
+* Make sure you have Eigen library installed. Suppose the path is `/path/to/eigen`.
+* Compile the `kernelizaion_multiprocess.cpp` program first using the following command.
+```
+g++ -o kmp kernelization_multiprocess.cpp -I/path/to/eigen -pthread -O3
+```
+* Then run the python notebook.
