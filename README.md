@@ -307,7 +307,7 @@ g++ -o kmp kernelization_multiprocess.cpp -I/path/to/eigen -pthread -O3
 
 Generate random graph $G$. Create `n` classes of graphs $G_1,\dots,G_n$ by randomly perturbing the time labels of some percentage of edges of $G$. Then for each class get copies of $G_i$ by again perturbing the time labels, but on a smaller percentage of edges. Compute the kernel on this dataset and implement SVM.
 
-The follwoing experiments are done with avg filteration. Only 2 dimentional persistance points are considred.
+The follwoing experiments are done with avg filteration. Only 2 dimensional persistence points are considred.
 
 #### Results :
 
@@ -340,11 +340,11 @@ The follwoing experiments are done with avg filteration. Only 2 dimentional pers
 | 3       | 4               | 1.5              |      |
 | 3       | 5               | 2                |      |
 | 3       | 7               | 2                |      |
-| 5       | 3               | 1                |      |
+| 5       | 3               | 1                |  1    |
 | 5       | 4               | 1.5              |      |
 | 5       | 5               | 2                |      |
 | 5       | 7               | 2                |     |
-| 7       | 3               | 1                |     |
+| 7       | 3               | 1                |   1  |
 | 7       | 4               | 1.5              |      |
 | 7       | 5               | 2                |      |
 | 7       | 7               | 2                |      |
