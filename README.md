@@ -299,6 +299,9 @@ g++ -o kmp kernelization_multiprocess.cpp -I/path/to/eigen -pthread -O3
 |         9 |                9 |           0.65     |    0.0484322 |                0.606667 |         0.0496158 |
 |         9 |               10 |           0.583333 |    0.0378431 |                0.544444 |         0.0389682 |
 
+
+## Using Average Filteration
+
 ### Type 1 : (Testing by Madhav)
 
 
@@ -314,12 +317,12 @@ The follwoing experiments are done with avg filteration. Only 2 dimentional pers
 |---------|-----------------|------------------|----------|
 | 3       | 3               | 1                | 0.99     |
 | 3       | 4               | 1.5              | 0.98     |
-| 3       | 5               | 2                | 1     |
+| 3       | 5               | 2                | 1        |
 | 3       | 7               | 2                | 0.99     |
-| 5       | 3               | 1                | 1     |
+| 5       | 3               | 1                | 1        |
 | 5       | 4               | 1.5              | 0.99     |
 | 5       | 5               | 2                | 0.98     |
-| 5       | 7               | 2                | 0.99    |
+| 5       | 7               | 2                | 0.99     |
 | 7       | 3               | 1                | 0.97     |
 | 7       | 4               | 1.5              | 0.99     |
 | 7       | 5               | 2                | 0.99     |
@@ -327,7 +330,7 @@ The follwoing experiments are done with avg filteration. Only 2 dimentional pers
 | 9       | 3               | 1                | 0.98     |
 | 9       | 4               | 1.5              | 0.98     |
 | 9       | 5               | 2                | 0.98     |
-| 9       | 7               | 2                |      |
+| 9       | 7               | 2                | 0.99     |
 
 2. V = 100, E = 2000, Sparsity = 0.4, PSSK, SVM. This is averaged over 5 runs.
 
