@@ -298,3 +298,77 @@ g++ -o kmp kernelization_multiprocess.cpp -I/path/to/eigen -pthread -O3
 |         9 |                8 |           0.623333 |    0.0470618 |                0.582222 |         0.0313089 |
 |         9 |                9 |           0.65     |    0.0484322 |                0.606667 |         0.0496158 |
 |         9 |               10 |           0.583333 |    0.0378431 |                0.544444 |         0.0389682 |
+
+### Type 1 : (Testing by Madhav)
+
+
+Generate random graph $G$. Create `n` classes of graphs $G_1,\dots,G_n$ by randomly perturbing the time labels of some percentage of edges of $G$. Then for each class get copies of $G_i$ by again perturbing the time labels, but on a smaller percentage of edges. Compute the kernel on this dataset and implement SVM.
+
+The follwoing experiments are done with avg filteration. Only 2 dimentional persistance points are considred.
+
+#### Results :
+
+1. V = 100, E = 1000, Sparsity = 0.2, PSSK, SVM. This is averaged over 5 runs.
+
+| Classes | Class Perturb % | Within Perturb % | Accuracy |
+|---------|-----------------|------------------|----------|
+| 3       | 3               | 1                | 0.99     |
+| 3       | 4               | 1.5              | 0.98     |
+| 3       | 5               | 2                | 1     |
+| 3       | 7               | 2                | 0.99     |
+| 5       | 3               | 1                | 1     |
+| 5       | 4               | 1.5              | 0.99     |
+| 5       | 5               | 2                | 0.98     |
+| 5       | 7               | 2                | 0.99    |
+| 7       | 3               | 1                | 0.97     |
+| 7       | 4               | 1.5              | 0.99     |
+| 7       | 5               | 2                | 0.99     |
+| 7       | 7               | 2                | 0.99     |
+| 9       | 3               | 1                | 0.98     |
+| 9       | 4               | 1.5              | 0.98     |
+| 9       | 5               | 2                | 0.98     |
+| 9       | 7               | 2                |      |
+
+2. V = 100, E = 2000, Sparsity = 0.4, PSSK, SVM. This is averaged over 5 runs.
+
+| Classes | Class Perturb % | Within Perturb % | Accuracy |
+|---------|-----------------|------------------|----------|
+| 3       | 3               | 1                | 1    |
+| 3       | 4               | 1.5              |      |
+| 3       | 5               | 2                |      |
+| 3       | 7               | 2                |      |
+| 5       | 3               | 1                |      |
+| 5       | 4               | 1.5              |      |
+| 5       | 5               | 2                |      |
+| 5       | 7               | 2                |     |
+| 7       | 3               | 1                |     |
+| 7       | 4               | 1.5              |      |
+| 7       | 5               | 2                |      |
+| 7       | 7               | 2                |      |
+| 9       | 3               | 1                |      |
+| 9       | 4               | 1.5              |      |
+| 9       | 5               | 2                |      |
+| 9       | 7               | 2                |      |
+
+3. V = 100, E = 3000, Sparsity = 0.6, PSSK, SVM. This is averaged over 5 runs.
+
+| Classes | Class Perturb % | Within Perturb % | Accuracy |
+|---------|-----------------|------------------|----------|
+| 3       | 3               | 1                |     |
+| 3       | 4               | 1.5              |      |
+| 3       | 5               | 2                |      |
+| 3       | 7               | 2                |      |
+| 5       | 3               | 1                |      |
+| 5       | 4               | 1.5              |      |
+| 5       | 5               | 2                |      |
+| 5       | 7               | 2                |     |
+| 7       | 3               | 1                |     |
+| 7       | 4               | 1.5              |      |
+| 7       | 5               | 2                |      |
+| 7       | 7               | 2                |      |
+| 9       | 3               | 1                |      |
+| 9       | 4               | 1.5              |      |
+| 9       | 5               | 2                |      |
+| 9       | 7               | 2                |      |
+
+
