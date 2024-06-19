@@ -350,7 +350,7 @@ The follwoing experiments are done with avg filteration. Only 2 dimensional pers
 | 7       | 7               | 2                |      |
 | 9       | 3               | 1                |      |
 | 9       | 4               | 1.5              |      |
-| 9       | 5               | 2                |      |
+| 9       | 5               | 2                |   1   |
 | 9       | 7               | 2                |    1  |
 
 3. V = 100, E = 3000, Sparsity = 0.6, PSSK, SVM. This is averaged over 5 runs.
