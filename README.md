@@ -372,6 +372,6 @@ The follwoing experiments are done with avg filteration. Only 2 dimensional pers
 | 9       | 3               | 1                |      |
 | 9       | 4               | 1.5              |      |
 | 9       | 5               | 2                |      |
-| 9       | 7               | 2                |      |
+| 9       | 7               | 2                |  1    |
 
 
