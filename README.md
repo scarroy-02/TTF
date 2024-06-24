@@ -374,6 +374,26 @@ The follwoing experiments are done with avg filteration. Only 2 dimensional pers
 | 9       | 5               | 2                | 0.99     |
 | 9       | 7               | 2                | 1        |
 
+4. V = 100, E = 4000, Sparsity = 0.8, PSSK, SVM. This is averaged over 5 runs.
+
+| Classes | Class Perturb % | Within Perturb % | Accuracy |
+|---------|-----------------|------------------|----------|
+| 3       | 3               | 1                |         |
+| 3       | 4               | 1.5              |         |
+| 3       | 5               | 2                |         |
+| 3       | 7               | 2                |         |
+| 5       | 3               | 1                |      |
+| 5       | 4               | 1.5              |         |
+| 5       | 5               | 2                |         |
+| 5       | 7               | 2                |         |
+| 7       | 3               | 1                |         |
+| 7       | 4               | 1.5              |         |
+| 7       | 5               | 2                |      |
+| 7       | 7               | 2                |         |
+| 9       | 3               | 1                |         |
+| 9       | 4               | 1.5              |      |
+| 9       | 5               | 2                |      |
+| 9       | 7               | 2                |        |
 
 #### Persistence diagram for a temproal graph with 100 vertices and 2000 edges.
 
