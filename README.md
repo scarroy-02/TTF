@@ -375,3 +375,19 @@ The follwoing experiments are done with avg filteration. Only 2 dimensional pers
 | 9       | 7               | 2                | 1        |
 
 
+#### Persistence diagram for a temproal graph with 100 vertices and 2000 edges.
+
+1) With Average Filteration
+
+![Avg](https://github.com/scarroy-02/TTF/assets/90920006/d03dee25-457b-4c25-9d3c-7cc602fed0cf)
+
+2) With Min Filteration
+
+![Min](https://github.com/scarroy-02/TTF/assets/90920006/fdd74f1d-d153-46fb-9bb0-7ee40dacd739)
+
+3) With Affinity Filteration
+
+![Affinity](https://github.com/scarroy-02/TTF/assets/90920006/b811cc76-4fce-43c1-b70b-272078574e6f)
+
+
+
