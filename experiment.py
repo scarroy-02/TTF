@@ -63,7 +63,7 @@ def new_testing(v,e,n_cluster,n_copies,wp,pers_dim):
     label = [i for i in range(n_cluster) for _ in range(n_copies)]
 
     # Apply assign_weights function in parallel
-    Lw = Parallel(n_jobs=-1)(delayed(assign_weights)(i) for i in all_graphs)
+    Lw = Parallel(n_jobs=-1)(delayed(assign_weights_avg)(i) for i in all_graphs)
 
     # Apply adj_fillinf function in parallel
     Lwe = Parallel(n_jobs=-1)(delayed(adj_fillinf)(i) for i in Lw)
@@ -150,26 +150,27 @@ def run_experiments(v, e, n_clusters_list, n_copies, wp_list, pers_dim, n_runs=5
     return results
 
 # Parameters
-v = 50
-e = 1000
+v = 100
+# e = 1000
 n_clusters_list = [3, 5, 7, 9]
 n_copies = 100
 wp_list = [0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10]
 pers_dim = 2
 n_runs = 5
 
-# Run experiments
-results = run_experiments(v, e, n_clusters_list, n_copies, wp_list, pers_dim, n_runs)
+for edge_count in [1000,2000,3000,4000]:
+    # Run experiments
+    results = run_experiments(v, edge_count, n_clusters_list, n_copies, wp_list, pers_dim, n_runs)
 
-# Create DataFrame
-columns = ['Classes', 'Perturbation %', 'SVM Avg Accuracy', 'SVM StdDev', 'Logistic Avg Accuracy', 'Logistic StdDev']
-df = pd.DataFrame(results, columns=columns)
+    # Create DataFrame
+    columns = ['Classes', 'Perturbation %', 'SVM Avg Accuracy', 'SVM StdDev', 'Logistic Avg Accuracy', 'Logistic StdDev']
+    df = pd.DataFrame(results, columns=columns)
 
-# Use tabulate to format the DataFrame as a Markdown table
-markdown_table = tabulate(df, headers='keys', tablefmt='pipe', showindex=False)
+    # Use tabulate to format the DataFrame as a Markdown table
+    markdown_table = tabulate(df, headers='keys', tablefmt='pipe', showindex=False)
 
-# Write the table to a text file
-with open('experiment_results.md', 'w') as f:
-    f.write(markdown_table)
+    # Write the table to a text file
+    with open(f'experiment_results_avg_{edge_count}.md', 'w') as f:
+        f.write(markdown_table)
 
-print("Results have been written to experiment_results.md")
+    print(f"Results have been written to experiment_results_avg_{edge_count}.md")
