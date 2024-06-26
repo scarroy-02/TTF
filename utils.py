@@ -27,6 +27,26 @@ def assign_weights(G):
         wtG.add_edge(u,v,weight=wt)
     return wtG
 
+def assign_weights_avg(G):
+    wtG = nx.Graph()
+    for edge in G.edges():
+        (u,v) = edge
+        s = 0
+        n = 0
+        for nbr in nx.neighbors(G,u):
+            if nbr == v: continue
+            else:
+                s += abs(G.edges[u,nbr]['time'] - G.edges[u,v]['time'])
+                n += 1
+        for nbr in nx.neighbors(G,v):
+            if nbr == u: continue
+            else:
+                s += abs(G.edges[v,nbr]['time'] - G.edges[u,v]['time'])
+                n += 1
+        if n != 0:
+            wtG.add_edge(u,v,weight=s/n)
+    return wtG
+
 def adj_fillinf(Gw):
     Aw = nx.adjacency_matrix(Gw,weight = 'weight')
     Ad = Aw.todense().astype(np.float64)
