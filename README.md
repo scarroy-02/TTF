@@ -395,6 +395,49 @@ The follwoing experiments are done with avg filteration. Only 2 dimensional pers
 | 9       | 5               | 2                | 0.98     |
 | 9       | 7               | 2                | 0.99     |
 
+### Type 2 : (Testing by Rohit)
+
+Generate `n` different random graphs $G_1,\dots,G_n$. Randomly perturb time labels of some percentage of edges of $G_i$ to get (slightly different) copies of the graph $G_i$ to create a class for each $i$. Then compute the kernel on this dataset and implement SVM.
+
+#### Results : 
+
+1. V = 1000, E = 1000, Sparsity = 0.19801980198019803, PSSK. The below table is averaged over 5 runs.
+
+|   Classes |   Perturbation % |   SVM Avg Accuracy |   SVM StdDev |   Logistic Avg Accuracy |   Logistic StdDev |
+|----------:|-----------------:|-------------------:|-------------:|------------------------:|------------------:|
+|         3 |                3 |           1        |   0          |                1        |        0          |
+|         3 |                4 |           1        |   0          |                1        |        0          |
+|         3 |                5 |           1        |   0          |                1        |        0          |
+|         3 |                6 |           1        |   0          |                1        |        0          |
+|         3 |                7 |           1        |   0          |                1        |        0          |
+|         3 |                8 |           1        |   0          |                1        |        0          |
+|         3 |                9 |           1        |   0          |                1        |        0          |
+|         3 |               10 |           1        |   0          |                0.996667 |        0.00666667 |
+|         5 |                3 |           1        |   0          |                1        |        0          |
+|         5 |                4 |           1        |   0          |                1        |        0          |
+|         5 |                5 |           1        |   0          |                1        |        0          |
+|         5 |                6 |           1        |   0          |                0.998    |        0.004      |
+|         5 |                7 |           1        |   0          |                0.996    |        0.00489898 |
+|         5 |                8 |           1        |   0          |                0.996    |        0.00489898 |
+|         5 |                9 |           1        |   0          |                1        |        0          |
+|         5 |               10 |           1        |   0          |                0.996    |        0.00489898 |
+|         7 |                3 |           1        |   0          |                0.998571 |        0.00285714 |
+|         7 |                4 |           1        |   0          |                1        |        0          |
+|         7 |                5 |           1        |   0          |                1        |        0          |
+|         7 |                6 |           1        |   0          |                0.997143 |        0.00571429 |
+|         7 |                7 |           1        |   0          |                0.997143 |        0.00571429 |
+|         7 |                8 |           1        |   0          |                0.992857 |        0.0142857  |
+|         7 |                9 |           0.998571 |   0.00285714 |                0.991429 |        0.00534522 |
+|         7 |               10 |           1        |   0          |                0.994286 |        0.00832993 |
+|         9 |                3 |           1        |   0          |                1        |        0          |
+|         9 |                4 |           1        |   0          |                1        |        0          |
+|         9 |                5 |           1        |   0          |                1        |        0          |
+|         9 |                6 |           1        |   0          |                1        |        0          |
+|         9 |                7 |           1        |   0          |                1        |        0          |
+|         9 |                8 |           1        |   0          |                0.998889 |        0.00222222 |
+|         9 |                9 |           1        |   0          |                0.998889 |        0.00222222 |
+|         9 |               10 |           1        |   0          |                0.994444 |        0.00351364 |
+
 #### Persistence diagram for a temproal graph with 100 vertices and 2000 edges.
 
 1) With Average Filteration
