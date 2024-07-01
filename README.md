@@ -438,6 +438,26 @@ Generate `n` different random graphs $G_1,\dots,G_n$. Randomly perturb time labe
 |         9 |                9 |           1        |   0          |                0.998889 |        0.00222222 |
 |         9 |               10 |           1        |   0          |                0.994444 |        0.00351364 |
 
+### Type 3 : (Testing by Madhav)
+
+Generate two random graphs $G$ and $G'$. Create `n` classes of graphs $G_1,\dots,G_n$ and `m` classes of graphs $G'_1,\dots,G'_m$ by randomly perturbing the time labels of some percentage of edges of $G$ and $G'$ respectively. Then for each class get copies of $G_i$ and $G'_i$ by again perturbing the time labels, but on a smaller percentage of edges. Compute the kernel on this dataset and implement SVM.
+
+| Classes | Class Perturb % | Within Perturb % | Accuracy |
+|---------|-----------------|------------------|----------|
+| 2-2     | 3               | 1                |          |
+| 2-2     | 4               | 1.5              |          |
+| 2-2     | 5               | 2                |          |
+| 2-2     | 7               | 2                |          |
+| 2-3     | 3               | 1                |          |
+| 2-3     | 4               | 1.5              |          |
+| 2-3     | 5               | 2                |          |
+| 2-3     | 7               | 2                |          |
+| 3-3     | 3               | 1                |          |
+| 3-3     | 4               | 1.5              |          |
+| 3-3     | 5               | 2                |          |
+| 3-3     | 7               | 2                |          |
+
+
 #### Persistence diagram for a temproal graph with 100 vertices and 2000 edges.
 
 1) With Average Filteration
