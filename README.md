@@ -461,6 +461,57 @@ Generate two random graphs $G$ and $G'$. Create `n` classes of graphs $G_1,\dots
 | 3-3     | 5               | 2                |          |
 | 3-3     | 7               | 2                |          |
 
+2. V = 100, E = 2000, Sparsity = 0.4, PSSK, SVM. This is averaged over 5 runs.
+
+| Classes | Class Perturb % | Within Perturb % | Accuracy |
+|---------|-----------------|------------------|----------|
+| 2-2     | 3               | 1                |          |
+| 2-2     | 4               | 1.5              |          |
+| 2-2     | 5               | 2                |          |
+| 2-2     | 7               | 2                |          |
+| 2-3     | 3               | 1                |          |
+| 2-3     | 4               | 1.5              |          |
+| 2-3     | 5               | 2                |          |
+| 2-3     | 7               | 2                |          |
+| 3-3     | 3               | 1                |          |
+| 3-3     | 4               | 1.5              |          |
+| 3-3     | 5               | 2                |          |
+| 3-3     | 7               | 2                |          |
+
+3. V = 100, E = 3000, Sparsity = 0.6, PSSK, SVM. This is averaged over 5 runs.
+
+| Classes | Class Perturb % | Within Perturb % | Accuracy |
+|---------|-----------------|------------------|----------|
+| 2-2     | 3               | 1                |          |
+| 2-2     | 4               | 1.5              |          |
+| 2-2     | 5               | 2                |          |
+| 2-2     | 7               | 2                |          |
+| 2-3     | 3               | 1                |          |
+| 2-3     | 4               | 1.5              |          |
+| 2-3     | 5               | 2                |          |
+| 2-3     | 7               | 2                |          |
+| 3-3     | 3               | 1                |          |
+| 3-3     | 4               | 1.5              |          |
+| 3-3     | 5               | 2                |          |
+| 3-3     | 7               | 2                |          |
+
+4. V = 100, E = 4000, Sparsity = 0.8, PSSK, SVM. This is averaged over 5 runs.
+
+| Classes | Class Perturb % | Within Perturb % | Accuracy |
+|---------|-----------------|------------------|----------|
+| 2-2     | 3               | 1                |          |
+| 2-2     | 4               | 1.5              |          |
+| 2-2     | 5               | 2                |          |
+| 2-2     | 7               | 2                |          |
+| 2-3     | 3               | 1                |          |
+| 2-3     | 4               | 1.5              |          |
+| 2-3     | 5               | 2                |          |
+| 2-3     | 7               | 2                |          |
+| 3-3     | 3               | 1                |          |
+| 3-3     | 4               | 1.5              |          |
+| 3-3     | 5               | 2                |          |
+| 3-3     | 7               | 2                |          |
+
 
 #### Persistence diagram for a temproal graph with 100 vertices and 2000 edges.
 
