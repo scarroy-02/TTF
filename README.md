@@ -457,9 +457,9 @@ Generate two random graphs $G$ and $G'$. Create `n` classes of graphs $G_1,\dots
 | 2-3     | 5               | 2                | 0.99     |
 | 2-3     | 7               | 2                | 0.99     |
 | 3-3     | 3               | 1                | 0.99     |
-| 3-3     | 4               | 1.5              |          |
-| 3-3     | 5               | 2                |          |
-| 3-3     | 7               | 2                |          |
+| 3-3     | 4               | 1.5              | 0.99     |
+| 3-3     | 5               | 2                | 0.99     |
+| 3-3     | 7               | 2                | 0.99     |
 
 2. V = 100, E = 2000, Sparsity = 0.4, PSSK, SVM. This is averaged over 5 runs.
 
