@@ -442,6 +442,10 @@ Generate `n` different random graphs $G_1,\dots,G_n$. Randomly perturb time labe
 
 Generate two random graphs $G$ and $G'$. Create `n` classes of graphs $G_1,\dots,G_n$ and `m` classes of graphs $G'_1,\dots,G'_m$ by randomly perturbing the time labels of some percentage of edges of $G$ and $G'$ respectively. Then for each class get copies of $G_i$ and $G'_i$ by again perturbing the time labels, but on a smaller percentage of edges. Compute the kernel on this dataset and implement SVM.
 
+#### Results :
+
+1. V = 100, E = 1000, Sparsity = 0.2, PSSK, SVM. This is averaged over 5 runs.
+
 | Classes | Class Perturb % | Within Perturb % | Accuracy |
 |---------|-----------------|------------------|----------|
 | 2-2     | 3               | 1                |          |
