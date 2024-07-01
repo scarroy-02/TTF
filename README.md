@@ -448,7 +448,7 @@ Generate two random graphs $G$ and $G'$. Create `n` classes of graphs $G_1,\dots
 
 | Classes | Class Perturb % | Within Perturb % | Accuracy |
 |---------|-----------------|------------------|----------|
-| 2-2     | 3               | 1                |          |
+| 2-2     | 3               | 1                | 0.98     |
 | 2-2     | 4               | 1.5              |          |
 | 2-2     | 5               | 2                |          |
 | 2-2     | 7               | 2                |          |
